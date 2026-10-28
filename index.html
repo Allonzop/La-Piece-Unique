@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Pièce Unique — pop culture, figurines et jeux vidéo à Charleville-Mézières</title>
+<meta name="description" content="La Pièce Unique, 30 rue Bourbon à Charleville-Mézières : figurines pop culture, Funko Pop!, mangas et anime, jeux vidéo rétro et modernes, cartes à collectionner. Ouvert du mardi au samedi.">
+<link rel="icon" href="enseigne.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --or:#D4A72C; --or-cl:#F0C64E; --or-f:#8E6F14;
+  --acier:#879CCB; --acier-f:#4E5F8E;
+  --nuit:#121318; --nuit-2:#191B22; --nuit-3:#23262F; --nuit-4:#30343F;
+  --blanc:#F4F5F7; --gris:#A7ADBA; --gris-f:#767D8A;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--nuit); color:var(--blanc);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px; line-height:1.65; font-weight:300;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+a{color:var(--or-cl)}
+h1,h2,h3,h4{font-family:Oswald,"Arial Narrow",sans-serif; font-weight:600; line-height:1.1; margin:0; letter-spacing:.005em}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
+.eyebrow{
+  font-family:"IBM Plex Sans",sans-serif; font-size:11.5px; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--or);
+  display:flex; align-items:center; gap:14px; margin:0 0 18px;
+}
+.eyebrow::after{content:""; height:1px; flex:1; background:linear-gradient(90deg,var(--or-f),transparent)}
+
+/* topbar */
+.top{position:sticky; top:0; z-index:50; background:rgba(18,19,24,.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--nuit-3)}
+.top .wrap{display:flex; align-items:center; gap:24px; min-height:66px}
+.brand{font-family:Oswald,sans-serif; font-weight:700; font-size:20px; letter-spacing:.03em; text-decoration:none; color:var(--blanc); white-space:nowrap}
+.brand span{color:var(--or)}
+.top nav{margin-left:auto; display:flex; gap:26px; flex-wrap:wrap}
+.top nav a{color:var(--gris); text-decoration:none; font-size:14.5px; font-weight:400}
+.top nav a:hover{color:var(--or-cl)}
+.top .tel{background:var(--or); color:#1A1403; text-decoration:none; border-radius:3px;
+  padding:9px 17px; font-size:14px; font-weight:600; white-space:nowrap; font-family:Oswald,sans-serif; letter-spacing:.04em}
+.top .tel:hover{background:var(--or-cl)}
+
+/* hero */
+.hero{padding:64px 0 56px; position:relative; overflow:hidden}
+.hero::before{content:""; position:absolute; left:-10%; top:-30%; width:60%; height:120%;
+  background:radial-gradient(circle,rgba(212,167,44,.10),transparent 65%); pointer-events:none}
+.hero .wrap{display:grid; grid-template-columns:1.02fr .98fr; gap:52px; align-items:center; position:relative}
+.hero h1{font-size:clamp(36px,5vw,58px); text-transform:uppercase}
+.hero h1 em{font-style:normal; color:var(--or)}
+.lede{font-size:18.5px; color:var(--gris); margin:22px 0 0; max-width:34em; font-weight:300}
+.btns{display:flex; gap:13px; flex-wrap:wrap; margin-top:30px}
+.btn{display:inline-block; text-decoration:none; border-radius:3px; padding:13px 24px;
+  font-size:14.5px; font-weight:600; font-family:Oswald,sans-serif; letter-spacing:.05em; text-transform:uppercase}
+.btn-p{background:var(--or); color:#1A1403}
+.btn-p:hover{background:var(--or-cl)}
+.btn-s{background:transparent; color:var(--blanc); border:1.5px solid var(--nuit-4)}
+.btn-s:hover{border-color:var(--or); color:var(--or-cl)}
+.heroimg img{width:100%; max-width:560px; margin-left:auto; border-radius:4px; border:1px solid var(--nuit-3)}
+.chips{display:flex; gap:9px; flex-wrap:wrap; margin-top:26px}
+.chip{font-size:12.5px; color:var(--gris); border:1px solid var(--nuit-4); border-radius:999px; padding:5px 13px}
+.chip b{color:var(--blanc); font-weight:600}
+
+/* rayons */
+.rayons{background:var(--nuit-2); padding:76px 0; border-top:1px solid var(--nuit-3); border-bottom:1px solid var(--nuit-3)}
+h2.big{font-size:clamp(28px,3.6vw,42px); text-transform:uppercase}
+h2.big + p{margin-top:16px}
+.p{color:var(--gris); font-size:17px}
+.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px}
+.card{background:var(--nuit); border:1px solid var(--nuit-3); border-radius:4px; overflow:hidden; display:flex; flex-direction:column}
+.card img{width:100%; aspect-ratio:4/3; object-fit:cover}
+.card .body{padding:22px 22px 24px}
+.card h3{font-size:19px; text-transform:uppercase; color:var(--or-cl); margin-bottom:9px}
+.card p{margin:0; font-size:15.5px; color:var(--gris)}
+
+/* horaires */
+.infos{padding:76px 0}
+.two{display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start}
+.hgrid{margin-top:26px; border:1px solid var(--nuit-3); border-radius:4px; overflow:hidden}
+.hgrid div{display:flex; justify-content:space-between; gap:16px; padding:11px 20px; font-size:15.5px; border-bottom:1px solid var(--nuit-3)}
+.hgrid div:last-child{border-bottom:0}
+.hgrid div:nth-child(odd){background:var(--nuit-2)}
+.hgrid dt,.hgrid .j{font-weight:500; color:var(--blanc)}
+.hgrid .h{color:var(--gris); font-variant-numeric:tabular-nums; text-align:right}
+.hgrid .sam{background:rgba(212,167,44,.12) !important}
+.hgrid .sam .j{color:var(--or-cl)}
+.contact{margin-top:28px; display:grid; gap:7px}
+.contact a,.contact p{margin:0; font-size:16.5px; color:var(--gris); text-decoration:none}
+.contact a:hover{color:var(--or-cl)}
+.contact .lbl{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--gris-f); margin-top:14px}
+.socials{display:flex; gap:9px; flex-wrap:wrap; margin-top:10px}
+.socials a{border:1px solid var(--nuit-4); color:var(--gris); border-radius:3px; padding:7px 14px;
+  font-size:13.5px; text-decoration:none; font-weight:400}
+.socials a:hover{border-color:var(--or); color:var(--or-cl)}
+.sidepic img{width:100%; max-width:500px; margin:0 auto; border-radius:4px; border:1px solid var(--nuit-3)}
+
+/* rachat */
+.rachat{background:var(--nuit-2); padding:72px 0; border-top:1px solid var(--nuit-3); border-bottom:1px solid var(--nuit-3)}
+.rachat .two{align-items:center}
+.plus{list-style:none; padding:0; margin:24px 0 0; display:grid; gap:11px}
+.plus li{display:flex; gap:12px; align-items:flex-start; font-size:16px; color:var(--gris)}
+.plus li::before{content:""; flex:none; width:7px; height:7px; margin-top:9px; transform:rotate(45deg); background:var(--or)}
+
+/* galerie */
+.gal-sec{padding:76px 0}
+.gal{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:34px}
+.gal figure{margin:0}
+.gal img{width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:4px; border:1px solid var(--nuit-3)}
+.gal figure.w img{aspect-ratio:4/3}
+
+/* footer */
+footer{background:#0C0D11; color:var(--gris-f); padding:46px 0 40px; font-size:14.5px; border-top:1px solid var(--nuit-3)}
+footer .wrap{display:flex; gap:30px; flex-wrap:wrap; justify-content:space-between; align-items:flex-start}
+footer a{color:var(--gris)}
+footer .legal{max-width:44em; font-size:13px}
+
+/* aconf */
+.aconf{display:inline-block; vertical-align:middle; margin-left:7px;
+  font-family:"IBM Plex Sans",sans-serif; font-size:10.5px; font-weight:600;
+  letter-spacing:.09em; text-transform:uppercase;
+  color:#FFB4A2; background:rgba(214,70,46,.14); border:1px dashed #C8553D;
+  border-radius:999px; padding:2px 9px; line-height:1.5; white-space:nowrap}
+
+/* demo */
+.demo{position:fixed; right:16px; bottom:16px; z-index:90;
+  background:var(--or); color:#1A1403; text-decoration:none; border-radius:999px;
+  padding:9px 17px; font-size:12.5px; font-weight:600; letter-spacing:.05em;
+  box-shadow:0 8px 24px rgba(0,0,0,.45); font-family:Oswald,sans-serif}
+.demo:hover{background:var(--or-cl)}
+
+@media (max-width:980px){
+  .hero .wrap,.two{grid-template-columns:1fr; gap:36px}
+  .heroimg img{margin:0 auto}
+  .cards{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{padding:40px 0 34px}
+  .rayons,.infos,.rachat,.gal-sec{padding:52px 0}
+  .top nav{display:none}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .demo{right:10px; bottom:10px; padding:8px 14px; font-size:11.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">LA PIÈCE <span>UNIQUE</span></a>
+    <nav>
+      <a href="#rayons">Les rayons</a>
+      <a href="#venir">Horaires &amp; accès</a>
+      <a href="#rachat">Rachat</a>
+      <a href="#galerie">La boutique</a>
+    </nav>
+    <a class="tel" href="tel:+33324560477">03 24 56 04 77</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">30 rue Bourbon · Charleville-Mézières</p>
+      <h1>Le temple de la <em>pop&nbsp;culture</em><br>à Charleville.</h1>
+      <p class="lede">Figurines, Funko&nbsp;Pop!, mangas et anime, jeux vidéo du rétro au moderne, model kits, cartes à collectionner et confiserie internationale. Collectionneur aguerri ou simple curieux, poussez la porte : il y a toujours une pièce que vous ne cherchiez pas.</p>
+      <div class="btns">
+        <a class="btn btn-p" href="#venir">Venir à la boutique</a>
+        <a class="btn btn-s" href="#rachat">Faire racheter vos pièces</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>4,8/5</b> · 140 avis Google</span>
+        <span class="chip"><b>5 300</b> abonnés sur Facebook</span>
+        <span class="chip"><b>Ouvert le samedi</b></span>
+      </div>
+    </div>
+    <div class="heroimg">
+      <img src="enseigne.jpg" alt="L'enseigne de La Pièce Unique, rue Bourbon à Charleville-Mézières, avec une figurine de Batman en vitrine">
+    </div>
+  </div>
+</section>
+
+<section class="rayons" id="rayons">
+  <div class="wrap">
+    <p class="eyebrow">Les rayons</p>
+    <h2 class="big">Ce que vous trouverez en poussant la porte.</h2>
+    <p class="p" style="max-width:46em">Des incontournables aux pièces rares, de la console de 1992 au model kit sorti la semaine dernière.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="mur-funko.jpg" alt="Un mur entier de boîtes Funko Pop! dans la boutique">
+        <div class="body">
+          <h3>Figurines pop culture</h3>
+          <p>Super-héros, films cultes, séries : des Funko&nbsp;Pop! les plus courants aux éditions limitées et aux pièces exclusives. Bandai, Funko, Neca.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="grendizer.jpg" alt="Une boîte Bandai UFO Robot Goldorak posée sur un plancher de bois">
+        <div class="body">
+          <h3>Manga, anime &amp; model kits</h3>
+          <p>Dragon Ball Z, One Piece, Naruto, L'Attaque des Titans, My Hero Academia — et tout le rayon Gundam et maquettes à monter.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="pokemon-boosters.jpg" alt="Des boosters et des coffrets Pokémon posés sur le comptoir">
+        <div class="body">
+          <h3>Cartes à collectionner</h3>
+          <p>Pokémon, Star Wars Unlimited et les autres jeux de cartes : boosters, coffrets, displays et boîtes d'entraînement élite.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cards" style="margin-top:20px">
+      <div class="card">
+        <img src="astrobot-toys.jpg" alt="Des figurines Astro Bot et une caisse de jouets dans un rayon">
+        <div class="body">
+          <h3>Jeux vidéo, du rétro au moderne</h3>
+          <p>Les classiques Nintendo, Sega et PlayStation côtoient les sorties du moment et leurs accessoires.<span class="aconf">rayon à détailler</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="saint-seiya.jpg" alt="Des coffrets Saint Seiya Champion Class empilés dans la boutique">
+        <div class="body">
+          <h3>Collector &amp; séries limitées</h3>
+          <p>Les grandes gammes premium, les éditions limitées et les pièces que l'on ne trouve pas en grande surface.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="halloween.jpg" alt="Deux figurines Youtooz : Michael Myers et Ghost Face">
+        <div class="body">
+          <h3>Horreur &amp; séries cultes</h3>
+          <p>Youtooz, Neca et les licences d'épouvante, à côté du rayon confiserie internationale.<span class="aconf">rayon confiserie à photographier</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="venir">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Horaires &amp; accès</p>
+      <h2 class="big">Du mardi au samedi, en plein centre.</h2>
+      <p class="p">La boutique est au 30 rue Bourbon, à deux pas de la place Ducale.<span class="aconf">horaires à confirmer</span></p>
+      <div class="hgrid">
+        <div><span class="j">Lundi</span><span class="h">Fermé</span></div>
+        <div><span class="j">Mardi</span><span class="h">10h00 – 12h00 · 13h00 – 19h00</span></div>
+        <div><span class="j">Mercredi</span><span class="h">10h00 – 12h00 · 13h00 – 19h00</span></div>
+        <div><span class="j">Jeudi</span><span class="h">10h00 – 12h00 · 13h00 – 19h00</span></div>
+        <div><span class="j">Vendredi</span><span class="h">10h00 – 12h00 · 13h00 – 19h00</span></div>
+        <div class="sam"><span class="j">Samedi</span><span class="h">10h00 – 19h00 en continu</span></div>
+        <div><span class="j">Dimanche</span><span class="h">Fermé</span></div>
+      </div>
+      <div class="contact">
+        <p class="lbl">Téléphone</p>
+        <a href="tel:+33324560477">03 24 56 04 77</a>
+        <p class="lbl">Courriel</p>
+        <a href="mailto:lapieceunique.charleville@gmail.com">lapieceunique.charleville@gmail.com</a>
+        <p class="lbl">Adresse</p>
+        <p>30 rue Bourbon, 08000 Charleville-Mézières</p>
+        <p class="lbl">Nous suivre</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LaPieceUniqueCharlevilleMezieres/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/lapieceunique.charleville/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@lapieceunique08" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.ebay.fr/str/lapieceuniquecharleville" target="_blank" rel="noopener">Boutique eBay</a>
+        </div>
+      </div>
+    </div>
+    <div class="sidepic">
+      <img src="funko-pyramide.jpg" alt="Une pyramide de boîtes Funko Pop! montée sur le comptoir de la boutique">
+    </div>
+  </div>
+</section>
+
+<section class="rachat" id="rachat">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Rachat</p>
+      <h2 class="big">Vous avez des pièces à vendre&nbsp;?</h2>
+      <p class="p">La boutique propose le rachat de vos affaires. Passez les montrer rue Bourbon pendant les heures d'ouverture, ou envoyez quelques photos avant de vous déplacer.</p>
+      <ul class="plus">
+        <li>Rachat au comptoir, pendant les heures d'ouverture</li>
+        <li>Ce qui est accepté : figurines, jeux, consoles, collections<span class="aconf">à confirmer</span></li>
+        <li>Les conditions et le mode d'estimation<span class="aconf">à préciser</span></li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-p" href="mailto:lapieceunique.charleville@gmail.com">Envoyer des photos</a>
+      </div>
+    </div>
+    <div class="sidepic">
+      <img src="funko-sorting-hat.jpg" alt="Une figurine Funko Pop! du Choixpeau magique, tenue à la main dans sa boîte">
+    </div>
+  </div>
+</section>
+
+<section class="gal-sec" id="galerie">
+  <div class="wrap">
+    <p class="eyebrow">La boutique</p>
+    <h2 class="big">Des murs entiers, du sol au plafond.</h2>
+    <div class="gal">
+      <figure><img src="funko-mur.jpg" alt="Des rangées de Funko Pop! One Piece, Ghost et Dragon Ball"></figure>
+      <figure><img src="pokemon-etb.jpg" alt="Des coffrets d'entraînement élite Pokémon empilés"></figure>
+      <figure><img src="pokemon-displays.jpg" alt="Des displays de boosters Pokémon sur le comptoir"></figure>
+      <figure class="w"><img src="gerant-boutique.jpg" alt="Thomas, le gérant, dans les rayons de La Pièce Unique"></figure>
+      <figure class="w"><img src="delorean.jpg" alt="La DeLorean de Retour vers le futur devant le cinéma Metropolis de Charleville-Mézières"></figure>
+      <figure class="w"><img src="gerant-chat.jpg" alt="Thomas et son chat, à côté d'une figurine de robot"></figure>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p style="margin:0 0 6px"><strong style="font-family:Oswald,sans-serif;color:var(--blanc);font-size:18px;letter-spacing:.03em">LA PIÈCE UNIQUE</strong></p>
+      <p style="margin:0">30 rue Bourbon, 08000 Charleville-Mézières<br>
+      <a href="tel:+33324560477">03 24 56 04 77</a> · <a href="mailto:lapieceunique.charleville@gmail.com">lapieceunique.charleville@gmail.com</a></p>
+      <p style="margin:14px 0 0"><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+    <p class="legal">Membre des Vitrines de Charleville-Mézières. Les photographies sont celles publiées par La Pièce Unique sur sa page Facebook et son compte Instagram.</p>
+  </div>
+</footer>
+
+<a class="demo" href="https://kraon.netlify.app/offre" target="_blank" rel="noopener">DÉMO KRAON</a>
+
+</body>
+</html>
